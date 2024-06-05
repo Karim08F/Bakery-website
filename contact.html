@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bakery Website</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+  
+</head>
+<body>
+    <header>
+        <h1>BakeHub Contact</h1>
+    </header>
+
+    <nav>
+        <a href="HOME.html">Home</a>
+        <a href="SHOP.html">SHOP</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="ORDER.html">ORDER</a>
+    </nav>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us!</p>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div>
+                <h3>Visit Us</h3>
+                <p>123 Bakery Street, Nairobi </p>
+            </div>
+
+            <div>
+                <h3>Email Us</h3>
+                <p>info@bakeHUB.com</p>
+            </div>
+
+            <div>
+                <h3>Call Us</h3>
+                <p>0712346678/p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button class="contact-button" type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 BakeHub Website. All rights reserved.
+    </footer>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: maroon;
+        color: #fff;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+
+    nav {
+        background-color: #444;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+        margin: 0 1em;
+    }
+
+    section {
+        padding: 2em;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 2em;
+    }
+
+    .contact-info div {
+        text-align: center;
+        margin: 1em;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    .contact-info div:hover {
+        background-color: #444;
+    }
+
+    .contact-button {
+        background-color: #444;
+        color: #fff;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</html>

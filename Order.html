@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeHUB</title>
+    
+</head>
+<body>
+    <header>
+        <h1>BakeHUB Order</h1>
+    </header>
+
+    <nav>
+        <a href="HOME.html">Home</a>
+        <a href="SHOP.html">SHOP</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="ORDER.html">ORDER</a>
+    </nav>
+
+    <form action="process_order.php" method="post">
+        <h2>Place Your Delicious Order</h2>
+
+        <label for="fullName">Your Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Your Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="product">Select Your Yummy Product:</label>
+        <select id="product" name="product" required>
+            <option value="cake">Cake</option>
+            <option value="bread">Bread</option>
+            <option value="pastry">Pastry</option>
+            <!-- Add more product options as needed -->
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <label for="comments">Any Special Requests or Comments?</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <button type="submit">Place Your Order</button>
+    </form>
+
+</body>
+<style>
+    body {
+ font-family: 'Playfair Display', serif;
+ background-image: url(
+     https://images.pexels.com/photos/14493620/pexels-photo-14493620.jpeg
+ );
+ background-position: center;
+ background-size: cover; 
+ margin: 0;
+ padding: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+header {
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         padding: 1em;
+     }
+     
+
+     nav {
+         background-color: #444;
+         padding: 0.5em;
+         text-align: center;
+     }
+
+     nav a {
+         color: #fff;
+         text-decoration: none;
+         padding: 1em;
+         margin: 0 1em;
+     }
+     form {
+         background-color: #fff;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         max-width: 600px;
+         width: 100%;
+         font-family: 'Poppins', sans-serif;
+         text-align: center;
+         color: #4a4a4a;
+     }
+
+     h2 {
+         color: #e44d26;
+     }
+
+     label {
+         display: block;
+         margin-bottom: 8px;
+         color: #4a4a4a;
+     }
+
+     input, select, textarea {
+         width: 100%;
+         padding: 8px;
+         margin-bottom: 16px;
+         box-sizing: border-box;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+     }
+
+     button {
+         background-color: #e44d26;
+         color: #fff;
+         padding: 10px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+     }
+
+     button:hover {
+         background-color: #d13c1e;
+     }
+ </style>
+</html>

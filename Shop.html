@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeHUB Shop</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Bakery Order Page</h1>
+
+    
+        <nav>
+            <a href="HOME.html">Home</a>
+            <a href="SHOP.html">SHOP</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+            <a href="ORDER.html">ORDER</a>
+            <div class="cart">
+                
+                <div class="cart-icon-container">
+                    <a class="cart-icon" style="cursor: pointer;">🛒</a>
+                    <span class="cart-item-count">0</span>
+                </div>
+                <button class="clear-cart-btn">Clear Cart</button></div>
+                </div>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <h2>Bread</h2>
+        <div class="menu-grid">
+            <!-- Bread Items -->
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/6c/b5/21/6cb52141c27bdd6d50ae72433daf1eff.jpg" alt="Bread 1">
+                <div class="item-details">
+                    <h3>Whole Wheat Bread</h3>
+                    <p>Healthy whole wheat bread with a nutty flavor.</p>
+                    <p><span>Taste:</span> Nutty</p>
+                    <p><span>Price:</span> $5.99</p>
+                    <button class="add-to-cart-btn" data-price="5.99">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/09/2b/27/092b27c4656ff892090ef6a7515fa517.jpg" alt="Bread 1">
+                <div class="item-details">
+                    <h3>Rye Bread</h3>
+                    <p>A bread made with a combination of rye flour and wheat flour.</p>
+                    <p><span>Taste:</span>  Earthy and slightly tangy.</p>
+                    <p><span>Price:</span> $7.99</p>
+                    <button class="add-to-cart-btn" data-price="7.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/bb/6d/61/bb6d61d14c0dd63708a1710aefbbe5c2.jpg" alt="Bread 1">
+                <div class="item-details">
+                    <h3>Baguette</h3>
+                    <p>A long, thin French bread with a crispy crust and soft interior.</p>
+                    <p><span>Taste:</span> Mild and slightly chewy.</p>
+                    <p><span>Price:</span> $5.99</p>
+                    <button class="add-to-cart-btn" data-price="5.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/c9/02/5a/c9025ac131a912450448235cb515f2d6.jpg" alt="Bread 1">
+                <div class="item-details">
+                    <h3>Brioche</h3>
+                    <p>A French bread enriched with butter and eggs, resulting in a soft, light texture.</p>
+                    <p><span>Taste:</span> Sweet and buttery.</p>
+                    <p><span>Price:</span> $6.99</p>
+                    <button class="add-to-cart-btn" data-price="6.99">Add to Cart</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2>Cakes</h2>
+        <div class="menu-grid">
+            <!-- Cake Items -->
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/32/9c/7c/329c7c087f470ad14b818ef85cbb7900.jpg" alt="Cake 1">
+                <div class="item-details">
+                    <h3>Chocolate Fudge Cake</h3>
+                    <p>Rich and decadent chocolate fudge cake.</p>
+                    <p><span>Taste:</span> Chocolaty</p>
+                    <p><span>Price:</span> $24.99</p>
+                    <button class="add-to-cart-btn" data-price="24.99">Add to Cart</button>>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/81/61/52/81615256a754fc158e706710fc40d7d3.jpg" alt="Cake 1">
+                <div class="item-details">
+                    <h3>Carrot Cake</h3>
+                    <p> Moist cake made with grated carrots, nuts, and spices, usually topped with cream cheese icing.</p>
+                    <p><span>Taste:</span>  Spiced and slightly sweet with a pleasant texture from carrots and nuts.</p>
+                    <p><span>Price:</span> $35</p>
+                    <button class="add-to-cart-btn" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/47/be/11/47be11f25fb1885426f9479add2d3038.jpg" alt="Cake 1">
+                <div class="item-details">
+                    <h3>Red Velvet Cake:</h3>
+                    <p>Vibrant red-colored cake with a subtle cocoa flavor, often paired with cream cheese frosting</p>
+                    <p><span>Taste:</span> Unique blend of mild chocolate and tangy cream cheese.</p>
+                    <p><span>Price:</span> $35</p>
+                    <button class="add-to-cart-btn" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/47/d1/40/47d140a12b754f1cda8d8d1d290d4b4d.jpg" alt="Cake 1">
+                <div class="item-details">
+                    <h3>Black Forest Cake</h3>
+                    <p>Layers of chocolate sponge cake, cherries, and whipped cream, often adorned with chocolate shavings.</p>
+                    <p><span>Taste:</span> Rich chocolate combined with sweet cherries and creamy goodnes</p>
+                    <p><span>Price:</span> $40</p>
+                    <button class="add-to-cart-btn" data-price="40">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2>Cookies</h2>
+        <div class="menu-grid">
+            <!-- Cookie Items -->
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/189536/pexels-photo-189536.jpeg" alt="Cookie 1">
+                <div class="item-details">
+                    <h3>Classic Chocolate Chip Cookie</h3>
+                    <p>Soft and chewy chocolate chip cookie.</p>
+                    <p><span>Taste:</span> Sweet and Chewy</p>
+                    <p><span>Price:</span> $2.49</p>
+                    <button class="add-to-cart-btn" data-price="2.49">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/7243524/pexels-photo-7243524.jpeg" alt="Cookie 1">
+                <div class="item-details">
+                    <h3>Oatmeal Raisin Cookies</h3>
+                    <p>Soft and chewy cookies with oats and raisins.</p>
+                    <p><span>Taste:</span> Slightly spiced, hearty, and sweet.</p>
+                    <p><span>Price:</span> $4.56</p>
+                    <button class="add-to-cart-btn" data-price="4.56">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/12039687/pexels-photo-12039687.jpeg" alt="Cookie 1">
+                <div class="item-details">
+                    <h3>Snickerdoodle Cookies:</h3>
+                    <p>Sugar cookies rolled in cinnamon-sugar before baking..</p>
+                    <p><span>Taste:</span> Buttery, with a hint of cinnamon and a chewy texture.</p>
+                    <p><span>Price:</span> $7</p>
+                    <button class="add-to-cart-btn" data-price="7">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/11325078/pexels-photo-11325078.jpeg" alt="Cookie 1">
+                <div class="item-details">
+                    <h3>Peanut Butter Cookies:</h3>
+                    <p>Cookies made with peanut butter for a rich flavor.</p>
+                    <p><span>Taste:</span>  Nutty, slightly salty, and sweet.</p>
+                    <p><span>Price:</span> $3.78</p>
+                    <button class="add-to-cart-btn" data-price="3.78">Add to Cart</button>
+                </div>
+            
+
+        </div>
+    </section>
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Cart</h2>
+    <ul class="cart-items"></ul>
+    <button class="order-button" onclick="location.href='SHOP.html'">SHOP</button>
+    
+</div>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #790d0d;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+    
+
+    nav {
+        background-color: #444;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+        margin: 0 1em;
+    }
+
+    section {
+        padding: 2em;
+    }
+
+    .menu-section {
+        margin-bottom: 2em;
+    }
+    .menu-section h2{
+        background-color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    }
+
+    .menu-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.9s;
+    }
+
+    .menu-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .menu-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+
+    .menu-item .item-details {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 1em;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .menu-item:hover .item-details {
+        display: block;
+    }
+
+    .menu-item h3,
+    .menu-item p,
+    .menu-item span {
+        margin: 0;
+    }
+
+    .menu-item button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .menu-item button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .menu-section h2 {
+        text-align: center;
+    }
+   
+.modal-content {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+text-align: center;
+color: #333;
+}
+
+.modal-content .close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 20px;
+color: #999;
+cursor: pointer;
+}
+
+.cart-items {
+list-style-type: none;
+padding: 0;
+}
+
+.cart-items li {
+margin-bottom: 10px;
+}
+
+.order-button {
+display: block;
+margin: 20px auto;
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.order-button:hover {
+background-color: #45a049;
+}
+.cart-icon-container {
+position: relative;
+display: inline-block;
+}
+
+.cart-icon {
+font-size: 24px;
+color: #fff; 
+}
+
+.cart-item-count {
+position: absolute;
+top: -8px;
+right: -8px;
+background-color: red;
+color: #fff; 
+border-radius: 50%;
+padding: 4px 8px;
+font-size: 12px;
+}
+.clear-cart-btn {
+display: block;
+margin-top: 10px;
+padding: 10px 20px;
+background-color: #ff4444;
+color: white;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.clear-cart-btn:hover {
+background-color: #ff3333;
+}
+
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const cartIcon = document.querySelector('.cart-icon');
+    const cartItemCount = document.querySelector('.cart-item-count');
+    const clearCartButton = document.querySelector('.clear-cart-btn');
+
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  
+    function updateCartItemCount() {
+        cartItemCount.textContent = cart.length;
+    }
+
+    
+    function updateCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+  
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const name = button.parentNode.querySelector('h3').textContent;
+            const price = parseFloat(button.getAttribute('data-price'));
+            cart.push({ name, price });
+            updateCartItemCount();
+            updateCart();
+        });
+    });
+
+    
+    cartIcon.addEventListener('click', function() {
+       
+        const params = new URLSearchParams();
+        params.append('cart', JSON.stringify(cart));
+        window.location.href = 'order.html?' + params.toString();
+    });
+
+    
+    clearCartButton.addEventListener('click', function() {
+      
+        cart = [];
+        updateCartItemCount();
+       
+        updateCart();
+    });
+});
+</script>
+</body>
+</html>

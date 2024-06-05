@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeHUB Login</title>
+</head>
+<body>
+    <div id="loginPopup" class="container" style="display: none;">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">login</button>
+            </div>
+ 
+        </form>
+        
+    </div>
+
+<div class="wrapper">
+    
+</div>
+</body>
+<style>
+ .wrapper {
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+</style>
+<script>
+    function showLogin() {
+        document.getElementById('loginPopup').style.display = 'block';
+    }
+
+    function hideLogin() {
+        document.getElementById('loginPopup').style.display = 'none';
+    }
+</script>
+
+
+</html>
+    
+

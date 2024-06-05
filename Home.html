@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeHUB HOME</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+   
+</head>
+<body>
+    <header>
+        <h1>BakeHub Website</h1>
+    </header>
+
+    <nav>
+        <a href="HOME.html">Home</a>
+        <a href="SHOP.html">SHOP</a>
+        <a href="ORDER.html">ORDER</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <div class="cart">
+            <div class="cart-icon-container">
+                <a class="cart-icon" style="cursor: pointer;">🛒</a>
+                <span class="cart-item-count">0</span>
+                <button class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to BakeHUB Bakery</h2>
+        <p>Discover delicious treats made with love.</p>
+    </section>
+
+    <section id="order">
+            <h2>Place Your Order</h2>
+    
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/09/2b/27/092b27c4656ff892090ef6a7515fa517.jpg" alt="Bread 1">
+                <div class="item-details">
+                    <h3>Rye Bread</h3>
+                    <p>A bread made with a combination of rye flour and wheat flour.</p>
+                    <p><span>Taste:</span>  Earthy and slightly tangy.</p>
+                    <p><span>Price:</span> $7.99</p>
+                    <button class="add-to-cart-btn" data-price="7.99">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/47/be/11/47be11f25fb1885426f9479add2d3038.jpg" alt="Cake 1">
+                <div class="item-details">
+                    <h3>Red Velvet Cake:</h3>
+                    <p>Vibrant red-colored cake with a subtle cocoa flavor, often paired with cream cheese frosting</p>
+                    <p><span>Taste:</span> Unique blend of mild chocolate and tangy cream cheese.</p>
+                    <p><span>Price:</span> $35</p>
+                    <button class="add-to-cart-btn" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/5c/13/3a/5c133a2669a586e76904aa9f6e625ac6.jpg" alt="Cookie 1">
+                <div class="item-details">
+                    <h3>Snickerdoodle Cookies:</h3>
+                    <p>Sugar cookies rolled in cinnamon-sugar before baking..</p>
+                    <p><span>Taste:</span> Buttery, with a hint of cinnamon and a chewy texture.</p>
+                    <p><span>Price:</span> $7</p>
+                    <button class="add-to-cart-btn" data-price="7">Add to Cart</button>
+                </div>
+            </div>
+    </section>
+
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to us!</p>
+
+    <div class="contact-info">
+        <div>
+            <h3>Visit Us</h3>
+            <p>123 Bakery Street, Cityville</p>
+        </div>
+
+        <div>
+            <h3>Email Us</h3>
+            <p>info@bakerywebsite.com</p>
+        </div>
+
+        <div>
+            <h3>Call Us</h3>
+            <p>+1 (555) 123-4567</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+           
+        </div>
+    </div>
+
+   
+    <button class="contact-button" onclick="location.href='contact.html'">Contact Page</button>
+</section>
+
+<hr>
+<script>
+    window.addEventListener('scroll', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+        const triggerBottom = window.innerHeight / 2;
+
+        menuItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+
+            if (itemTop < triggerBottom) {
+                item.classList.add('show');
+            } else {
+                item.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+<section id="about">
+<h2>About Us</h2>
+<p>Welcome to our bakery, where passion meets deliciousness. At Bakery Website, we take pride in crafting delightful treats that are made with love and the finest ingredients. Our journey began with a simple goal - to bring joy to people through the art of baking.</p>
+<img src="https://i.pinimg.com/236x/1d/e0/38/1de038bc495a76bb120608d14c4d851a.jpg" alt="Bakery Image">
+</section>
+
+<section id="feedbacks">
+<h2>Customer Feedbacks</h2>
+<div class="feedback">
+    <p>"Absolutely love the Rye Bread! It's the perfect blend of earthy flavors."</p>
+    <p>- James</p>
+</div>
+<div class="feedback">
+    <p>"The Red Velvet Cake is a showstopper at every celebration. Highly recommended!"</p>
+    <p>- Frank</p>
+</div>
+<div class="feedback">
+    <p>"Snickerdoodle Cookies are my guilty pleasure. So buttery and delicious!"</p>
+    <p>- Juma</p>
+</div>
+</section>
+
+<div id="cartDetails" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Cart</h2>
+    <ul class="cart-items"></ul>
+    <button class="order-button" onclick="location.href='SHOP.html'">SHOP</button>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartItemCount = document.querySelector('.cart-item-count');
+        const clearCartButton = document.querySelector('.clear-cart-btn');
+    
+        // Retrieve cart items from localStorage if available
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // Function to update cart item count
+        function updateCartItemCount() {
+            cartItemCount.textContent = cart.length;
+        }
+    
+        // Function to update cart items in localStorage
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
+        // Add click event listener to each 'Add to Cart' button
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const name = button.parentNode.querySelector('h3').textContent;
+                const price = parseFloat(button.getAttribute('data-price'));
+                cart.push({ name, price });
+                updateCartItemCount();
+                updateCart();
+            });
+        });
+    
+        // Add click event listener to cart icon
+        cartIcon.addEventListener('click', function() {
+            // Redirect to order page with cart details as URL parameters
+            const params = new URLSearchParams();
+            params.append('cart', JSON.stringify(cart));
+            window.location.href = 'order.html?' + params.toString();
+        });
+    
+        // Add click event listener to clear cart button
+        clearCartButton.addEventListener('click', function() {
+            // Clear cart array and update count
+            cart = [];
+            updateCartItemCount();
+            // Update cart in localStorage
+            updateCart();
+        });
+    });
+    </script>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #941010;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+        }
+        #order {
+            padding-top: 2em;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .menu-item {
+            flex: 1;
+            text-align: center;
+            margin: 1em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .menu-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .menu-item button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu-item button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        section#about {
+            background-color: #fff;
+            padding: 2em;
+        }
+
+        section#about img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section#about h2,
+        section#about p {
+            text-align: center;
+        }
+
+        section#feedbacks {
+            background-color: #f4f4f4;
+            padding: 2em;
+        }
+
+        section#feedbacks h2 {
+            text-align: center;
+        }
+
+        .feedback {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact{
+            background-color: brown;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .contact-info div {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .contact-button {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #333;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-items li {
+    margin-bottom: 10px;
+}
+
+.order-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #45a049;
+}
+.cart-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #fff;
+}
+.cart-item-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+.clear-cart-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-cart-btn:hover {
+    background-color: #ff3333;
+}
+
+    </style>
+
+</body>
+</html>

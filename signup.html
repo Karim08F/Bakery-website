@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeHUB Bakery</title>
+    
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <label for="signup-as">Sign Up</label>
+                <select name="signup-as" id="signup-as" required>
+                    <option value="">Select</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Client">Client</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" name="confirm" id="confirm" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="already-account">
+            
+        </div>
+        <div class="already-account">
+            <p>Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
+        </div>
+    </div>
+
+ 
+</body>
+<style>
+     body {
+    padding: 0;
+    margin: 0;
+    background-image: url(https://images.pexels.com/photos/1291712/pexels-photo-1291712.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+    .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgb(209, 190, 15);
+        border: 1px solid #ddad0f;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-group button {
+        padding: 10px 20px;
+        background-color: #a6ff00;
+        color: white;
+        border: none;
+        font-size: 16px;
+    }
+    .form-group button:hover {
+        background-color: #5fb300;
+    }
+    .already-account {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .already-account a {
+        color: #a6ff00;
+        text-decoration: none;
+    }
+    .already-account a:hover {
+        text-decoration: underline;
+    }
+</style>
+</html>
